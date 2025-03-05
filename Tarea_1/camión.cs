@@ -8,14 +8,28 @@ namespace Tarea_1
 {
     internal class camión:Vehiculo
     {
-        public override void Avanzar()
-        {
-            Console.WriteLine("El camión está avanzando");
+        public camión(string marca, double gasolina) : base(marca, gasolina)
+        { 
+        
         }
 
+        //Simula que el camión avanza
+        public override void Avanzar()
+        {
+            if (GetGasolina() > 0)
+            {
+                Console.WriteLine($"El camión {GetMarca()} está avanzando");
+            }
+            else
+            {
+                Console.WriteLine($"El camión {GetMarca()} no tiene gasolina para arrancar.");
+            }
+        }
+
+        //Simula que el camión se detiene
         public override void Detener()
         {
-            Console.WriteLine("El camión se ha detenido");
+            Console.WriteLine($"El camión {GetMarca()} se ha detenido.");
         }
     }
 }
