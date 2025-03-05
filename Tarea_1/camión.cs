@@ -6,19 +6,22 @@ using System.Threading.Tasks;
 
 namespace Tarea_1
 {
-    internal class camión:Vehiculo
+   internal class Camion : Vehiculo
     {
-        public camión(string marca, double combustible) : base(marca, combustible)
+        private int capacidad;
+        private int capacidadMaxima = 10;
+
+        public Camion(string marca, double combustible) : base(marca, combustible)
         { 
-        
+            this.capacidad = 0; // Inicializamos la capacidad
         }
 
-        //Simula que el camión avanza
+        // Simula que el camión avanza
         public override void Avanzar()
         {
             if (GetCombustible() > 0)
             {
-                Console.WriteLine($"El camión {GetMarca()} está avanzando");
+                Console.WriteLine($"El camión {GetMarca()} está avanzando.");
             }
             else
             {
@@ -26,10 +29,25 @@ namespace Tarea_1
             }
         }
 
-        //Simula que el camión se detiene
+        // Simula que el camión se detiene
         public override void Detener()
         {
             Console.WriteLine($"El camión {GetMarca()} se ha detenido.");
+        }
+
+        // Simula que el camión se carga
+        public void Cargar()
+        {
+            Console.WriteLine($"El camión {GetMarca()} se está cargando.");
+            capacidad = 0; // Reiniciamos la capacidad antes de cargar
+
+            while (capacidad < capacidadMaxima)
+            {
+                Console.WriteLine($"El camión {GetMarca()} se está cargando con {capacidad} toneladas.");
+                capacidad += 1; // Aumentamos la capacidad
+            }
+
+            Console.WriteLine($"El camión {GetMarca()} se ha cargado completamente con {capacidad} toneladas.");
         }
     }
 }
