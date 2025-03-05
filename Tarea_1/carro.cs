@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Tarea_1
 {
-    internal class carro:Vehiculo
+    internal class Carro:Vehiculo
     {
-        public carro(string marca, double combustible) : base(marca, combustible) { }
+        public Carro(string marca, double combustible) : base(marca, combustible) { }
 
         //Simula que el carro avanza
         public override void Avanzar()

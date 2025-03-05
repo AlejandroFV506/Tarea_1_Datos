@@ -1,4 +1,5 @@
-﻿using Tarea_1;
+﻿using System;
+using Tarea_1;
 
 
 namespace Tarea_1
@@ -7,9 +8,9 @@ namespace Tarea_1
     {
         public static void Main(string[] args)
         {
-            Vehiculo carro = new carro("Toyota", 10.5);
-            Vehiculo camion = new camión("Volvo", 0); 
-            Vehiculo bicicleta = new bicicleta("Trek", 0); 
+            Vehiculo carro = new Carro("Toyota", 10.5);
+            Vehiculo camion = new Camion("Volvo", 0); 
+            Vehiculo bicicleta = new Bicicleta("Trek", 0); 
 
             carro.Avanzar();
             carro.Detener();  
@@ -20,8 +21,20 @@ namespace Tarea_1
             bicicleta.Avanzar();
             bicicleta.Detener();  
 
-            carro.SetMarca(""); 
-            carro.SetGasolina(-5); 
+            carro.GetMarca();
+            Console.WriteLine("La Marca del carro es " + carro.GetMarca());
+            
+            carro.GetCombustible();
+            Console.WriteLine("El combustible del carro es " + carro.GetCombustible());
+            carro.SetMarca("Hyundai"); 
+            carro.SetCombustible(1000);
+
+            camion.GetMarca();
+            camion.SetMarca("Mercedes Benz"); 
+
+            Console.WriteLine("La Marca del carro es " + carro.GetMarca());
+            Console.WriteLine("La Marca del camion es " + camion.GetMarca());
+            Console.WriteLine("El combustible del carro es " + carro.GetCombustible());
         }
     }
 }

@@ -73,5 +73,10 @@ namespace Tarea_1
         {
             Console.WriteLine("El vehículo se ha detenido.");
         }
+
+        internal void SetGasolina(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
