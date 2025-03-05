@@ -9,12 +9,12 @@ namespace Tarea_1
     internal class Vehiculo
     {
         private string marca;
-        private double gasolina;
+        private double combustible;
 
-        public Vehiculo(string marca, double gasolina)
+        public Vehiculo(string marca, double combustible)
         {
             this.marca = marca;
-            this.gasolina = gasolina;
+            this.combustible = combustible;
         }
 
         // Método para obtener la marca
@@ -36,35 +36,35 @@ namespace Tarea_1
             }
         }
 
-        // Método obtener la gasolina
-        public double GetGasolina()
+        // Método obtener el combustible
+        public double GetCombustible()
         {
-            return gasolina;
+            return combustible;
         }
 
-        // Método para agragar gasolina
-        public void SetGasolina(double gasolina)
+        // Método para agregar combustible
+        public void SetCombustible(double combustible)
         {
-            if (gasolina >= 0) 
+            if (combustible >= 0) 
             {
-                this.gasolina = gasolina;
+                this.combustible = combustible;
             }
             else
             {
-                Console.WriteLine("La gasolina no puede ser negativa.");
+                Console.WriteLine("El combustible no puede ser negativo.");
             }
         }
 
         //Método que simula que el vehiculo avanza
         public virtual void Avanzar()
         {
-            if (gasolina > 0)
+            if (combustible > 0)
             {
                 Console.WriteLine("El vehículo está avanzando.");
             }
             else
             {
-                Console.WriteLine("No hay suficiente gasolina para arrancar.");
+                Console.WriteLine("No hay suficiente combustible para arrancar.");
             }
         }
         

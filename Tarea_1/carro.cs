@@ -8,18 +8,18 @@ namespace Tarea_1
 {
     internal class carro:Vehiculo
     {
-        public carro(string marca, double gasolina) : base(marca, gasolina) { }
+        public carro(string marca, double combustible) : base(marca, combustible) { }
 
         //Simula que el carro avanza
         public override void Avanzar()
         {
-            if (GetGasolina() > 0)
+            if (GetCombustible() > 0)
             {
                 Console.WriteLine($"El carro {GetMarca()} está avanzando");
             }
             else
             {
-                Console.WriteLine($"El carro {GetMarca()} no tiene gasolina para arrancar");
+                Console.WriteLine($"El carro {GetMarca()} no tiene combustible para arrancar");
             }
         }
 

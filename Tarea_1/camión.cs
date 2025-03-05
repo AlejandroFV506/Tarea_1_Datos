@@ -8,7 +8,7 @@ namespace Tarea_1
 {
     internal class camión:Vehiculo
     {
-        public camión(string marca, double gasolina) : base(marca, gasolina)
+        public camión(string marca, double combustible) : base(marca, combustible)
         { 
         
         }
@@ -16,13 +16,13 @@ namespace Tarea_1
         //Simula que el camión avanza
         public override void Avanzar()
         {
-            if (GetGasolina() > 0)
+            if (GetCombustible() > 0)
             {
                 Console.WriteLine($"El camión {GetMarca()} está avanzando");
             }
             else
             {
-                Console.WriteLine($"El camión {GetMarca()} no tiene gasolina para arrancar.");
+                Console.WriteLine($"El camión {GetMarca()} no tiene combustible para arrancar.");
             }
         }
 

@@ -8,15 +8,15 @@ namespace Tarea_1
 {
     internal class bicicleta:Vehiculo
     {
-        public bicicleta(string marca, double gasolina) : base(marca, gasolina) { }
+        public bicicleta(string marca, double combustible) : base(marca, combustible) { }
 
-        //Simula que el camión avanza
+        //Simula que la bicicleta avanza
         public override void Avanzar()
         {
             Console.WriteLine($"La bicicleta {GetMarca()} esta avanzando");
         }
 
-        //Simula que el camión se detiene
+        //Simula que la bicicleta se detiene
         public override void Detener()
         {
             Console.WriteLine($"La bicicleta {GetMarca()} se ha detenido.");
